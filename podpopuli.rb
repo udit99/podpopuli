@@ -5,14 +5,14 @@ require_relative 'github_searchresult_parser'
 
 class PodPopuli
   SEARCH_URL = 'https://github.com/search?l=ruby&o=desc&p=#{page_number}&q=%22platform+%3Aios%22&ref=cmdform&s=indexed&type=Code'
-  SLEEP_SECONDS = 1
+  SLEEP_SECONDS = 10
 
   def initialize
     @pod_counter = {}
   end
 
   def crawl
-    (1..2).each do |page_number|
+    (1..100).each do |page_number|
       sleep SLEEP_SECONDS
       pod_names = GithubSearchresultParser.parse_podnames(eval('"'+SEARCH_URL+'"'))
       update_pod_counter(pod_names)
