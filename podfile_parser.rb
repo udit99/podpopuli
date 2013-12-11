@@ -9,6 +9,7 @@ class PodfileParser
 
   def self.scrub(line)
     line = line.gsub(/^pod/, '').strip
+    line = line.split(",").first
     strip_quotes(line)
   end
 
