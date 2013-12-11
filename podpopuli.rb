@@ -17,6 +17,7 @@ class PodPopuli
       pod_names = GithubSearchresultParser.parse_podnames(eval('"'+SEARCH_URL+'"'))
       update_pod_counter(pod_names)
     end
+    puts "************* Popular CocoaPods by usage ****************"
     display @pod_counter.sort_by{|pod, count| count}.reverse
   end
 
