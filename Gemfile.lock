@@ -1,7 +1,6 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    addressable (2.2.8)
     coderay (1.0.9)
     columnize (0.3.6)
     debugger (1.6.2)
@@ -10,18 +9,8 @@ GEM
       debugger-ruby_core_source (~> 1.2.3)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.3)
-    github (0.7.2)
-      highline (~> 1.6)
-      json_pure (~> 1.5.1)
-      launchy (~> 2.0.2)
-      text-format (= 1.0.0)
-      text-hyphen (= 1.0.0)
-    highline (1.6.20)
-    json_pure (1.5.5)
-      spruz (~> 0.2.8)
-    launchy (2.0.5)
-      addressable (~> 2.2.6)
     method_source (0.8.2)
+    nokogiri (1.5.10)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -30,15 +19,11 @@ GEM
       debugger (~> 1.3)
       pry (~> 0.9.10)
     slop (3.4.6)
-    spruz (0.2.13)
-    text-format (1.0.0)
-      text-hyphen (~> 1.0.0)
-    text-hyphen (1.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  github
+  nokogiri
   pry
   pry-debugger

@@ -1,5 +1,5 @@
 source :rubygems
 
-gem 'github'
+gem 'nokogiri'
 gem 'pry'
 gem 'pry-debugger'
