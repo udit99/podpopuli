@@ -17,7 +17,7 @@ class PodPopuli
       pod_names = GithubSearchresultParser.parse_podnames(eval('"'+SEARCH_URL+'"'))
       update_pod_counter(pod_names)
     end
-    puts @pod_counter.sort_by{|pod, count| pod}
+    puts @pod_counter.sort_by{|pod, count| count}.reverse
   end
 
   private
