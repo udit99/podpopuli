@@ -14,6 +14,6 @@ class PodfileParser
   end
 
   def self.strip_quotes(str)
-    str.gsub(/\'/,'')
+    str.gsub(/(\'|\")/,'')
   end
 end

@@ -17,7 +17,7 @@ class PodPopuli
       pod_names = GithubSearchresultParser.parse_podnames(eval('"'+SEARCH_URL+'"'))
       update_pod_counter(pod_names)
     end
-    puts @pod_counter.sort_by{|pod, count| count}.reverse
+    display @pod_counter.sort_by{|pod, count| count}.reverse
   end
 
   private
@@ -25,6 +25,10 @@ class PodPopuli
     keywords.each do |keyword|
       @pod_counter[keyword] = @pod_counter[keyword] ? (@pod_counter[keyword] + 1) : 1
     end
+  end
+
+  def display pod_counts
+    pod_counts.each{|pod_name,count| puts "#{pod_name}:#{count}"}
   end
 
 end
